@@ -1,0 +1,130 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apiserpent/main/json-schema/apiserpent-get-api-tiktok-tiktokid-response-schema.json",
+  "title": "GetApiTiktokTiktokidResponse",
+  "x-generated": "2026-10-16",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/apiserpent-openapi-generated.yml#/components/schemas/GetApiTiktokTiktokidResponse",
+  "type": "object",
+  "properties": {
+    " success ": {
+      "type": "boolean"
+    },
+    " items ": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          " video_id ": {
+            "type": "string"
+          },
+          " video_url ": {
+            "type": "string"
+          },
+          " description ": {
+            "type": "string"
+          },
+          " created_at ": {
+            "type": "string"
+          },
+          " author ": {
+            "type": "object",
+            "properties": {
+              " username ": {
+                "type": "string"
+              },
+              " nickname ": {
+                "type": "string"
+              },
+              " verified ": {
+                "type": "boolean"
+              }
+            }
+          },
+          " music ": {
+            "type": "object",
+            "properties": {
+              " music_id ": {
+                "type": "string"
+              },
+              " title ": {
+                "type": "string"
+              },
+              " original ": {
+                "type": "boolean"
+              }
+            }
+          },
+          " stats ": {
+            "type": "object",
+            "properties": {
+              " play_count ": {
+                "type": "integer"
+              },
+              " digg_count ": {
+                "type": "integer"
+              },
+              " comment_count ": {
+                "type": "integer"
+              },
+              " share_count ": {
+                "type": "integer"
+              }
+            }
+          },
+          " hashtags ": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                " name ": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          " mentions ": {
+            "type": "array",
+            "items": {}
+          }
+        }
+      }
+    },
+    " result_count ": {
+      "type": "integer"
+    },
+    " total_count ": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    " has_more ": {
+      "type": "boolean"
+    },
+    " next_cursor ": {
+      "type": "string"
+    },
+    " truncated ": {
+      "type": "boolean"
+    },
+    " restricted ": {
+      "type": "boolean"
+    },
+    " complete ": {
+      "type": "boolean"
+    },
+    " meta ": {
+      "type": "object",
+      "properties": {
+        " elapsed ": {
+          "type": "string"
+        },
+        " timestamp ": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

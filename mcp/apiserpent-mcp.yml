@@ -1,0 +1,74 @@
+generated: '2026-10-16'
+method: derived
+generator: derive-mcp-candidate.py
+source:
+- openapi/_ae-authored/apiserpent-openapi-generated.yml
+status: candidate
+deployment:
+  mode: none
+  auth: unknown
+  verified: probed
+note: No MCP server was found. The pre-flight posted tools/list to /mcp on api.apiserpent.com, apiserpent.com; verdict absent. Candidate tools
+  below are derived from the 12 operation(s) in the provider's own OpenAPI (12 listed); they describe what a server WOULD expose, not one that
+  exists.
+tools:
+- name: get_api_ai_rank
+  operationId: get_api_ai_rank
+  method: GET
+  path: /api/ai/rank
+  description: GET /api/ai/rank
+- name: get_api_ai_rank_chatgpt
+  operationId: get_api_ai_rank_chatgpt
+  method: GET
+  path: /api/ai/rank/chatgpt
+  description: GET /api/ai/rank/chatgpt
+- name: post_api_bulk_jobs
+  operationId: post_api_bulk_jobs
+  method: POST
+  path: /api/bulk/jobs
+  description: Submit TikTok items through POST /api/bulk/jobs
+- name: get_api_linkedin_profile_full
+  operationId: get_api_linkedin_profile_full
+  method: GET
+  path: /api/linkedin/profile/full
+  description: GET /api/linkedin/profile/full
+- name: get_api_linkedin_linkedinid
+  operationId: get_api_linkedin_linkedinid
+  method: GET
+  path: /api/linkedin/{linkedinid}
+  description: GET /api/linkedin/company
+- name: get_api_reddit_redditid
+  operationId: get_api_reddit_redditid
+  method: GET
+  path: /api/reddit/{redditid}
+  description: GET /api/reddit/comments
+- name: get_api_search_quick
+  operationId: get_api_search_quick
+  method: GET
+  path: /api/search/quick
+  description: GET /api/search/quick
+- name: get_api_social_youtube_youtubeid
+  operationId: get_api_social_youtube_youtubeid
+  method: GET
+  path: /api/social/youtube/{youtubeid}
+  description: GET /api/social/youtube/channel
+- name: get_api_tiktok_tiktokid
+  operationId: get_api_tiktok_tiktokid
+  method: GET
+  path: /api/tiktok/{tiktokid}
+  description: GET /api/tiktok/hashtag
+- name: get_api_x_xid
+  operationId: get_api_x_xid
+  method: GET
+  path: /api/x/{xid}
+  description: GET /api/x/tweet
+- name: get_api_apiid
+  operationId: get_api_apiid
+  method: GET
+  path: /api/{apiid}
+  description: GET /api/countries returns the full country list and needs no API key.
+- name: get_api_apiid_profile
+  operationId: get_api_apiid_profile
+  method: GET
+  path: /api/{apiid}/profile
+  description: GET /api/x/profile

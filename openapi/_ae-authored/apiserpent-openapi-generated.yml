@@ -1,0 +1,1139 @@
+openapi: 3.1.0
+info:
+  title: Contentladder Marketing API
+  version: '2026-10-16'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-16: 12 operation(s) read from 8 public documentation page(s) (each operation
+    names its page in x-source). This is not the provider''s published contract; Contentladder Marketing has published no machine-readable contract
+    that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 21
+    documentation: -9
+    pages-with-code: 8
+    pages-read: 8
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-16'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://apiserpent.com/x-api
+  - https://apiserpent.com/news-api
+  - https://apiserpent.com/serp-api
+  - https://apiserpent.com/reddit-api
+  - https://apiserpent.com/tiktok-api
+  - https://apiserpent.com/ai-rank-api
+  - https://apiserpent.com/youtube-api
+  - https://apiserpent.com/linkedin-api
+paths:
+  /api/ai/rank:
+    get:
+      operationId: get_api_ai_rank
+      tags:
+      - Api
+      summary: GET /api/ai/rank
+      x-source: https://apiserpent.com/ai-rank-api
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetApiAiRankResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl -G " https://apiserpent.com/api/ai/rank "  --data-urlencode " q=best project management tools "  -d " domain=example.com
+          "  -H " X-API-Key : YOUR_API_KEY"'
+  /api/ai/rank/chatgpt:
+    get:
+      operationId: get_api_ai_rank_chatgpt
+      tags:
+      - Api
+      summary: GET /api/ai/rank/chatgpt
+      x-source: https://apiserpent.com/ai-rank-api
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetApiAiRankChatgptResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -G \" https://apiserpent.com/api/ai/rank/chatgpt \"  --data-urlencode \" q=best project management tools \"  -d \" domain=example.com\
+          \ \" -d \" prompt_type=deep \"  -H \" X-API-Key : YOUR_API_KEY\" \n Python — requests "
+  /api/bulk/jobs:
+    post:
+      operationId: post_api_bulk_jobs
+      tags:
+      - Api
+      summary: Submit TikTok items through POST /api/bulk/jobs
+      description: Create asynchronous bulk jobs for TikTok endpoints.
+      x-source: https://apiserpent.com/tiktok-api
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostApiBulkJobsRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /api/linkedin/profile/full:
+    get:
+      operationId: get_api_linkedin_profile_full
+      tags:
+      - Api
+      summary: GET /api/linkedin/profile/full
+      x-source: https://apiserpent.com/linkedin-api
+      parameters:
+      - name: url
+        in: query
+        required: false
+        schema:
+          type: string
+        description: profile URL
+      - name: username
+        in: query
+        required: false
+        schema:
+          type: string
+        description: profile slug
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetApiLinkedinProfileFullResponse'
+      x-evidence:
+        kind: documentation
+  /api/linkedin/{linkedinid}:
+    get:
+      operationId: get_api_linkedin_linkedinid
+      tags:
+      - Api
+      summary: GET /api/linkedin/company
+      x-source: https://apiserpent.com/linkedin-api
+      parameters:
+      - name: linkedinid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: url
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetApiLinkedinLinkedinidResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl " https://apiserpent.com/api/linkedin/company?url=https://www.linkedin.com/company/stripe "  -H " X-API-Key : YOUR_API_KEY"'
+        collapsed_from: 6 example path(s) differing only at linkedinId
+  /api/reddit/{redditid}:
+    get:
+      operationId: get_api_reddit_redditid
+      tags:
+      - Api
+      summary: GET /api/reddit/comments
+      x-source: https://apiserpent.com/reddit-api
+      parameters:
+      - name: redditid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: limit
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: post_id
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: subreddit
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: tree
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetApiRedditRedditidResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl " https://apiserpent.com/api/reddit/comments?subreddit=python&post_id=1m4k2ab&limit=100&tree=true "  -H " X-API-Key : YOUR_API_KEY"'
+        collapsed_from: 5 example path(s) differing only at redditId
+  /api/search/quick:
+    get:
+      operationId: get_api_search_quick
+      tags:
+      - Api
+      summary: GET /api/search/quick
+      x-source: https://apiserpent.com/serp-api
+      parameters:
+      - name: engine
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: num
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: q
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetApiSearchQuickResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl \" https://apiserpent.com/api/search/quick?q=best+crm+software&engine=ddg&num=10 \"  -H \" X-API-Key : YOUR_API_KEY\" \n\
+          \ JSON Response — the key set is identical on every engine \n {\n \" success \": true ,\n \" query \": \" best crm software \",\n \"\
+          \ type \": \" web \",\n \" engine \": \" brave \",\n \" country \": \" us \",\n \" pagesRequested \": 2 ,\n \" pagesScraped \": 2 ,\n\
+          \ \" results \": {\n \" organic \": [\n {\n \" title \": \""
+  /api/social/youtube/{youtubeid}:
+    get:
+      operationId: get_api_social_youtube_youtubeid
+      tags:
+      - Api
+      summary: GET /api/social/youtube/channel
+      x-source: https://apiserpent.com/youtube-api
+      parameters:
+      - name: youtubeid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: id
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: include_videos
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetApiSocialYoutubeYoutubeidResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl " https://apiserpent.com/api/social/youtube/channel?id=@mkbhd&include_videos=true "  -H " X-API-Key : YOUR_API_KEY"'
+        collapsed_from: 4 example path(s) differing only at youtubeId
+  /api/tiktok/{tiktokid}:
+    get:
+      operationId: get_api_tiktok_tiktokid
+      tags:
+      - Api
+      summary: GET /api/tiktok/hashtag
+      x-source: https://apiserpent.com/tiktok-api
+      parameters:
+      - name: tiktokid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: country
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: limit
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: tag
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetApiTiktokTiktokidResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl \" https://apiserpent.com/api/tiktok/hashtag?tag=cottagecore&limit=180&country=us \"  -H \" X-API-Key : YOUR_API_KEY\"\
+          \ \n Python — one hashtag list into rows \n import os, requests\nh = { \"X-API-Key\" : os.environ[ \"SERPENT_API_KEY\" ]}\np = { \"\
+          tag\" : \"cottagecore\" , \"limit\" : 180 , \"country\" : \"us\" }\ndata = requests.get( \"https://apiserpent.com/api/tiktok/hashtag\"\
+          \ ,\n params=p, headers=h, timeout= 120 "
+        collapsed_from: 5 example path(s) differing only at tiktokId
+  /api/x/{xid}:
+    get:
+      operationId: get_api_x_xid
+      tags:
+      - Api
+      summary: GET /api/x/tweet
+      x-source: https://apiserpent.com/x-api
+      parameters:
+      - name: xid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: id
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetApiXXidResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl " https://apiserpent.com/api/x/tweet?id=1234567890123456789 "  -H " X-API-Key : YOUR_API_KEY"'
+        collapsed_from: 2 example path(s) differing only at xId
+  /api/{apiid}:
+    get:
+      operationId: get_api_apiid
+      tags:
+      - Api
+      summary: GET /api/countries returns the full country list and needs no API key.
+      x-source: https://apiserpent.com/news-api
+      parameters:
+      - name: apiid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: country
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: engine
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: freshness
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: q
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetApiApiidResponse'
+      x-evidence:
+        kind: documentation
+        collapsed_from: 4 example path(s) differing only at apiId
+  /api/{apiid}/profile:
+    get:
+      operationId: get_api_apiid_profile
+      tags:
+      - Api
+      summary: GET /api/x/profile
+      x-source: https://apiserpent.com/x-api
+      parameters:
+      - name: apiid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: handle
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: hydrate
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetApiApiidProfileResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl \" https://apiserpent.com/api/x/profile?handle=example&hydrate=true \"  -H \" X-API-Key : YOUR_API_KEY\" \n Python — a\
+          \ profile and its recent posts into rows \n import os, requests\nh = { \"X-API-Key\" : os.environ[ \"SERPENT_API_KEY\" ]}\np = { \"\
+          handle\" : \"example\" , \"hydrate\" : \"true\" }\nr = requests.get( \"https://apiserpent.com/api/x/profile\" ,\n params=p, headers=h,\
+          \ timeout= 120 )"
+        collapsed_from: 3 example path(s) differing only at apiId
+components:
+  schemas:
+    GetApiAiRankResponse:
+      type: object
+      properties:
+        ' chatgpt ':
+          type: object
+          properties:
+            ' llm ':
+              type: string
+            ' model ':
+              type: string
+            ' citations ':
+              type: array
+              items:
+                type: object
+                properties:
+                  ' position ':
+                    type: integer
+                  ' url ':
+                    type: string
+                  ' title ':
+                    type: string
+                  ' cited_text ':
+                    type: string
+                  ' url_normalized ':
+                    type: string
+                  ' domain ':
+                    type: string
+            ' target_found ':
+              type: boolean
+            ' target_position ':
+              type: integer
+            ' target_match_type ':
+              type: string
+            ' target_matched_domain ':
+              type: string
+            ' total_citations ':
+              type: integer
+            ' response_text ':
+              type: string
+            ' error ':
+              type:
+              - string
+              - 'null'
+        ' claude ':
+          type: object
+          properties:
+            ' llm ':
+              type: string
+            ' model ':
+              type: string
+            ' target_found ':
+              type: boolean
+            ' target_position ':
+              type: integer
+        ' gemini ':
+          type: object
+          properties:
+            ' llm ':
+              type: string
+            ' model ':
+              type: string
+            ' target_found ':
+              type: boolean
+            ' target_position ':
+              type:
+              - string
+              - 'null'
+        ' perplexity ':
+          type: object
+          properties:
+            ' llm ':
+              type: string
+            ' model ':
+              type: string
+            ' target_found ':
+              type: boolean
+            ' target_position ':
+              type: integer
+    GetApiAiRankChatgptResponse:
+      type: object
+      properties:
+        ' chatgpt ':
+          type: object
+          properties:
+            ' llm ':
+              type: string
+            ' model ':
+              type: string
+            ' citations ':
+              type: array
+              items:
+                type: object
+                properties:
+                  ' position ':
+                    type: integer
+                  ' url ':
+                    type: string
+                  ' title ':
+                    type: string
+                  ' cited_text ':
+                    type: string
+                  ' url_normalized ':
+                    type: string
+                  ' domain ':
+                    type: string
+            ' target_found ':
+              type: boolean
+            ' target_position ':
+              type: integer
+            ' target_match_type ':
+              type: string
+            ' target_matched_domain ':
+              type: string
+            ' total_citations ':
+              type: integer
+            ' response_text ':
+              type: string
+            ' error ':
+              type:
+              - string
+              - 'null'
+        ' claude ':
+          type: object
+          properties:
+            ' llm ':
+              type: string
+            ' model ':
+              type: string
+            ' target_found ':
+              type: boolean
+            ' target_position ':
+              type: integer
+        ' gemini ':
+          type: object
+          properties:
+            ' llm ':
+              type: string
+            ' model ':
+              type: string
+            ' target_found ':
+              type: boolean
+            ' target_position ':
+              type:
+              - string
+              - 'null'
+        ' perplexity ':
+          type: object
+          properties:
+            ' llm ':
+              type: string
+            ' model ':
+              type: string
+            ' target_found ':
+              type: boolean
+            ' target_position ':
+              type: integer
+    PostApiBulkJobsRequest:
+      type: object
+      properties:
+        tiktok_profile:
+          type: string
+        tiktok_video:
+          type: string
+        tiktok_hashtag:
+          type: string
+        tiktok_search:
+          type: string
+        tiktok_music:
+          type: string
+    GetApiLinkedinProfileFullResponse:
+      type: object
+      properties:
+        full_name:
+          type: string
+        first_name:
+          type: string
+        last_name:
+          type: string
+        headline:
+          type: string
+        occupation:
+          type: string
+        summary:
+          type: string
+        location.city:
+          type: string
+        location.state:
+          type: string
+        location.country:
+          type: string
+        current_company.name:
+          type: string
+        current_company.title:
+          type: string
+        experiences:
+          type: array
+        education:
+          type: array
+        languages:
+          type: array
+        honors_awards:
+          type: array
+        follower_count:
+          type: integer
+        connections:
+          type: integer
+        flags.top_voice:
+          type: boolean
+        profile_pic_url:
+          type: string
+        profile_url:
+          type: string
+    GetApiLinkedinLinkedinidResponse:
+      type: object
+      properties:
+        ' success ':
+          type: boolean
+        ' data ':
+          type: object
+          properties:
+            ' name ':
+              type: string
+            ' universal_name_id ':
+              type: string
+            ' industry ':
+              type: string
+            ' company_size ':
+              type: string
+            ' employee_count ':
+              type: integer
+            ' founded_year ':
+              type: integer
+            ' company_type ':
+              type: string
+            ' specialities ':
+              type: array
+              items:
+                type: string
+            ' website ':
+              type: string
+            ' hq ':
+              type: object
+              properties:
+                ' city ':
+                  type: string
+                ' state ':
+                  type: string
+                ' country ':
+                  type: string
+                ' line_1 ':
+                  type: string
+            ' logo_url ':
+              type: string
+    GetApiRedditRedditidResponse:
+      type: object
+      properties:
+        subreddit:
+          type: string
+        sort:
+          type: string
+        t:
+          type: string
+        limit:
+          type: integer
+    GetApiSearchQuickResponse:
+      type: object
+      properties:
+        ' success ':
+          type: boolean
+        ' query ':
+          type: string
+        ' type ':
+          type: string
+        ' engine ':
+          type: string
+        ' country ':
+          type: string
+        ' pagesRequested ':
+          type: integer
+        ' pagesScraped ':
+          type: integer
+        ' results ':
+          type: object
+          properties:
+            ' organic ':
+              type: array
+              items:
+                type: object
+                properties:
+                  ' title ':
+                    type: string
+                  ' url ':
+                    type: string
+                  ' snippet ':
+                    type: string
+                  ' displayedUrl ':
+                    type: string
+                  ' position ':
+                    type: integer
+            ' ads ':
+              type: object
+              properties:
+                ' top ':
+                  type: array
+                  items: {}
+                ' bottom ':
+                  type: array
+                  items: {}
+                ' totalCount ':
+                  type: integer
+            ' peopleAlsoAsk ':
+              type: array
+              items:
+                type: object
+                properties:
+                  ' question ':
+                    type: string
+                  ' answer ':
+                    type: string
+                  ' sourceUrl ':
+                    type: string
+                  ' sourceTitle ':
+                    type: string
+                  ' sourceDisplay ':
+                    type: string
+            ' relatedSearches ':
+              type: array
+              items:
+                type: object
+                properties:
+                  ' query ':
+                    type: string
+            ' featuredSnippet ':
+              type:
+              - string
+              - 'null'
+            ' aiOverview ':
+              type:
+              - string
+              - 'null'
+            ' knowledgePanel ':
+              type:
+              - string
+              - 'null'
+            ' localPack ':
+              type: array
+              items: {}
+            ' richSnippets ':
+              type: array
+              items: {}
+            ' videos ':
+              type: array
+              items: {}
+            ' shopping ':
+              type: array
+              items: {}
+        ' metadata ':
+          type: object
+          properties:
+            ' totalOrganicResults ':
+              type: integer
+            ' hasAds ':
+              type: boolean
+            ' hasPeopleAlsoAsk ':
+              type: boolean
+            ' hasRelatedSearches ':
+              type: boolean
+            ' hasFeaturedSnippet ':
+              type: boolean
+            ' hasAiOverview ':
+              type: boolean
+            ' hasKnowledgePanel ':
+              type: boolean
+            ' hasLocalPack ':
+              type: boolean
+        ' meta ':
+          type: object
+          properties:
+            ' totalOrganic ':
+              type: integer
+            ' requestedNum ':
+              type: integer
+            ' elapsed ':
+              type: string
+    GetApiSocialYoutubeYoutubeidResponse:
+      type: object
+      properties:
+        ' success ':
+          type: boolean
+        ' query ':
+          type: string
+        ' type ':
+          type: string
+        ' results ':
+          type: array
+          items:
+            type: object
+            properties:
+              ' position ':
+                type: integer
+              ' id ':
+                type: string
+              ' type ':
+                type: string
+              ' title ':
+                type: string
+              ' description ':
+                type: string
+              ' channelId ':
+                type: string
+              ' channelTitle ':
+                type: string
+              ' publishedAt ':
+                type: string
+              ' thumbnail ':
+                type: string
+              ' url ':
+                type: string
+        ' totalResults ':
+          type: integer
+        ' nextPageToken ':
+          type: string
+        ' prevPageToken ':
+          type:
+          - string
+          - 'null'
+        ' meta ':
+          type: object
+          properties:
+            ' elapsed ':
+              type: string
+            ' timestamp ':
+              type: string
+    GetApiTiktokTiktokidResponse:
+      type: object
+      properties:
+        ' success ':
+          type: boolean
+        ' items ':
+          type: array
+          items:
+            type: object
+            properties:
+              ' video_id ':
+                type: string
+              ' video_url ':
+                type: string
+              ' description ':
+                type: string
+              ' created_at ':
+                type: string
+              ' author ':
+                type: object
+                properties:
+                  ' username ':
+                    type: string
+                  ' nickname ':
+                    type: string
+                  ' verified ':
+                    type: boolean
+              ' music ':
+                type: object
+                properties:
+                  ' music_id ':
+                    type: string
+                  ' title ':
+                    type: string
+                  ' original ':
+                    type: boolean
+              ' stats ':
+                type: object
+                properties:
+                  ' play_count ':
+                    type: integer
+                  ' digg_count ':
+                    type: integer
+                  ' comment_count ':
+                    type: integer
+                  ' share_count ':
+                    type: integer
+              ' hashtags ':
+                type: array
+                items:
+                  type: object
+                  properties:
+                    ' name ':
+                      type: string
+              ' mentions ':
+                type: array
+                items: {}
+        ' result_count ':
+          type: integer
+        ' total_count ':
+          type:
+          - string
+          - 'null'
+        ' has_more ':
+          type: boolean
+        ' next_cursor ':
+          type: string
+        ' truncated ':
+          type: boolean
+        ' restricted ':
+          type: boolean
+        ' complete ':
+          type: boolean
+        ' meta ':
+          type: object
+          properties:
+            ' elapsed ':
+              type: string
+            ' timestamp ':
+              type: string
+    GetApiXXidResponse:
+      type: object
+      properties:
+        ' success ':
+          type: boolean
+        ' tweet ':
+          type: object
+          properties:
+            ' id ':
+              type: string
+            ' url ':
+              type: string
+            ' text ':
+              type: string
+            ' lang ':
+              type: string
+            ' created_at ':
+              type: string
+            ' possibly_sensitive ':
+              type: boolean
+            ' is_edited ':
+              type: boolean
+            ' author ':
+              type: object
+              properties:
+                ' id ':
+                  type: string
+                ' name ':
+                  type: string
+                ' screen_name ':
+                  type: string
+                ' verified ':
+                  type: boolean
+                ' profile_image_url ':
+                  type: string
+            ' counts ':
+              type: object
+              properties:
+                ' favorites ':
+                  type: integer
+                ' replies ':
+                  type: integer
+            ' media ':
+              type: array
+              items:
+                type: object
+                properties:
+                  ' type ':
+                    type: string
+                  ' url ':
+                    type: string
+                  ' width ':
+                    type: integer
+                  ' height ':
+                    type: integer
+            ' hashtags ':
+              type: array
+              items:
+                type: string
+            ' mentions ':
+              type: array
+              items:
+                type: string
+            ' urls ':
+              type: array
+              items:
+                type: string
+            ' quoted_tweet ':
+              type:
+              - string
+              - 'null'
+            ' reply_to ':
+              type:
+              - string
+              - 'null'
+    GetApiApiidResponse:
+      type: object
+      properties:
+        ' success ':
+          type: boolean
+        ' query ':
+          type: string
+        ' type ':
+          type: string
+        ' engine ':
+          type: string
+        ' country ':
+          type: string
+        ' pagesScraped ':
+          type: integer
+        ' results ':
+          type: object
+          properties:
+            ' articles ':
+              type: array
+              items:
+                type: object
+                properties:
+                  ' position ':
+                    type: integer
+                  ' title ':
+                    type: string
+                  ' url ':
+                    type: string
+                  ' source ':
+                    type: string
+                  ' publishedTime ':
+                    type: string
+                  ' snippet ':
+                    type: string
+                  ' image ':
+                    type:
+                    - string
+                    - 'null'
+            ' totalResults ':
+              type: integer
+        ' meta ':
+          type: object
+          properties:
+            ' totalArticles ':
+              type: integer
+            ' elapsed ':
+              type: string
+            ' timestamp ':
+              type: string
+    GetApiApiidProfileResponse:
+      type: object
+      properties:
+        ' success ':
+          type: boolean
+        ' tweet ':
+          type: object
+          properties:
+            ' id ':
+              type: string
+            ' url ':
+              type: string
+            ' text ':
+              type: string
+            ' lang ':
+              type: string
+            ' created_at ':
+              type: string
+            ' possibly_sensitive ':
+              type: boolean
+            ' is_edited ':
+              type: boolean
+            ' author ':
+              type: object
+              properties:
+                ' id ':
+                  type: string
+                ' name ':
+                  type: string
+                ' screen_name ':
+                  type: string
+                ' verified ':
+                  type: boolean
+                ' profile_image_url ':
+                  type: string
+            ' counts ':
+              type: object
+              properties:
+                ' favorites ':
+                  type: integer
+                ' replies ':
+                  type: integer
+            ' media ':
+              type: array
+              items:
+                type: object
+                properties:
+                  ' type ':
+                    type: string
+                  ' url ':
+                    type: string
+                  ' width ':
+                    type: integer
+                  ' height ':
+                    type: integer
+            ' hashtags ':
+              type: array
+              items:
+                type: string
+            ' mentions ':
+              type: array
+              items:
+                type: string
+            ' urls ':
+              type: array
+              items:
+                type: string
+            ' quoted_tweet ':
+              type:
+              - string
+              - 'null'
+            ' reply_to ':
+              type:
+              - string
+              - 'null'
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      in: header
+      name: X-API-Key
+security:
+- apiKey: []
+tags:
+- name: Api

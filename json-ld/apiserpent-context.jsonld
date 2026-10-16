@@ -1,0 +1,144 @@
+{
+  "@context": {
+    "@vocab": "https://apiserpent.com/schema#",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "apiserpent": "https://apiserpent.com/schema#",
+    "GetApiAiRankResponse": "apiserpent:GetApiAiRankResponse",
+    "GetApiAiRankChatgptResponse": "apiserpent:GetApiAiRankChatgptResponse",
+    "PostApiBulkJobsRequest": "apiserpent:PostApiBulkJobsRequest",
+    "tiktok_profile": {
+      "@id": "apiserpent:tiktok_profile",
+      "@type": "xsd:string"
+    },
+    "tiktok_video": {
+      "@id": "apiserpent:tiktok_video",
+      "@type": "xsd:string"
+    },
+    "tiktok_hashtag": {
+      "@id": "apiserpent:tiktok_hashtag",
+      "@type": "xsd:string"
+    },
+    "tiktok_search": {
+      "@id": "apiserpent:tiktok_search",
+      "@type": "xsd:string"
+    },
+    "tiktok_music": {
+      "@id": "apiserpent:tiktok_music",
+      "@type": "xsd:string"
+    },
+    "GetApiLinkedinProfileFullResponse": "apiserpent:GetApiLinkedinProfileFullResponse",
+    "full_name": {
+      "@id": "apiserpent:full_name",
+      "@type": "xsd:string"
+    },
+    "first_name": {
+      "@id": "apiserpent:first_name",
+      "@type": "xsd:string"
+    },
+    "last_name": {
+      "@id": "apiserpent:last_name",
+      "@type": "xsd:string"
+    },
+    "headline": {
+      "@id": "apiserpent:headline",
+      "@type": "xsd:string"
+    },
+    "occupation": {
+      "@id": "apiserpent:occupation",
+      "@type": "xsd:string"
+    },
+    "summary": {
+      "@id": "apiserpent:summary",
+      "@type": "xsd:string"
+    },
+    "location.city": {
+      "@id": "apiserpent:location.city",
+      "@type": "xsd:string"
+    },
+    "location.state": {
+      "@id": "apiserpent:location.state",
+      "@type": "xsd:string"
+    },
+    "location.country": {
+      "@id": "apiserpent:location.country",
+      "@type": "xsd:string"
+    },
+    "current_company.name": {
+      "@id": "apiserpent:current_company.name",
+      "@type": "xsd:string"
+    },
+    "current_company.title": {
+      "@id": "apiserpent:current_company.title",
+      "@type": "xsd:string"
+    },
+    "experiences": {
+      "@id": "apiserpent:experiences",
+      "@container": "@list"
+    },
+    "education": {
+      "@id": "apiserpent:education",
+      "@container": "@list"
+    },
+    "languages": {
+      "@id": "apiserpent:languages",
+      "@container": "@list"
+    },
+    "honors_awards": {
+      "@id": "apiserpent:honors_awards",
+      "@container": "@list"
+    },
+    "follower_count": {
+      "@id": "apiserpent:follower_count",
+      "@type": "xsd:integer"
+    },
+    "connections": {
+      "@id": "apiserpent:connections",
+      "@type": "xsd:integer"
+    },
+    "flags.top_voice": {
+      "@id": "apiserpent:flags.top_voice",
+      "@type": "xsd:boolean"
+    },
+    "profile_pic_url": {
+      "@id": "apiserpent:profile_pic_url",
+      "@type": "xsd:string"
+    },
+    "profile_url": {
+      "@id": "apiserpent:profile_url",
+      "@type": "xsd:string"
+    },
+    "GetApiLinkedinLinkedinidResponse": "apiserpent:GetApiLinkedinLinkedinidResponse",
+    "GetApiRedditRedditidResponse": "apiserpent:GetApiRedditRedditidResponse",
+    "subreddit": {
+      "@id": "apiserpent:subreddit",
+      "@type": "xsd:string"
+    },
+    "sort": {
+      "@id": "apiserpent:sort",
+      "@type": "xsd:string"
+    },
+    "t": {
+      "@id": "apiserpent:t",
+      "@type": "xsd:string"
+    },
+    "limit": {
+      "@id": "apiserpent:limit",
+      "@type": "xsd:integer"
+    },
+    "GetApiSearchQuickResponse": "apiserpent:GetApiSearchQuickResponse",
+    "GetApiSocialYoutubeYoutubeidResponse": "apiserpent:GetApiSocialYoutubeYoutubeidResponse",
+    "GetApiTiktokTiktokidResponse": "apiserpent:GetApiTiktokTiktokidResponse",
+    "GetApiXXidResponse": "apiserpent:GetApiXXidResponse",
+    "GetApiApiidResponse": "apiserpent:GetApiApiidResponse",
+    "GetApiApiidProfileResponse": "apiserpent:GetApiApiidProfileResponse"
+  },
+  "@type": "schema:Dataset",
+  "schema:name": "Contentladder Marketing API JSON-LD context",
+  "schema:description": "A JSON-LD @context for the objects Contentladder Marketing's own API contract declares: one class per component schema, one property per declared field, typed from the contract. Derived by script (derive-json-ld.py, 2026-10-16) from openapi/_ae-authored/apiserpent-openapi-generated.yml.",
+  "dcterms:created": "2026-10-16",
+  "dcterms:source": [
+    "openapi/_ae-authored/apiserpent-openapi-generated.yml"
+  ]
+}

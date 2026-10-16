@@ -1,0 +1,188 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apiserpent/main/json-schema/apiserpent-get-api-search-quick-response-schema.json",
+  "title": "GetApiSearchQuickResponse",
+  "x-generated": "2026-10-16",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/apiserpent-openapi-generated.yml#/components/schemas/GetApiSearchQuickResponse",
+  "type": "object",
+  "properties": {
+    " success ": {
+      "type": "boolean"
+    },
+    " query ": {
+      "type": "string"
+    },
+    " type ": {
+      "type": "string"
+    },
+    " engine ": {
+      "type": "string"
+    },
+    " country ": {
+      "type": "string"
+    },
+    " pagesRequested ": {
+      "type": "integer"
+    },
+    " pagesScraped ": {
+      "type": "integer"
+    },
+    " results ": {
+      "type": "object",
+      "properties": {
+        " organic ": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              " title ": {
+                "type": "string"
+              },
+              " url ": {
+                "type": "string"
+              },
+              " snippet ": {
+                "type": "string"
+              },
+              " displayedUrl ": {
+                "type": "string"
+              },
+              " position ": {
+                "type": "integer"
+              }
+            }
+          }
+        },
+        " ads ": {
+          "type": "object",
+          "properties": {
+            " top ": {
+              "type": "array",
+              "items": {}
+            },
+            " bottom ": {
+              "type": "array",
+              "items": {}
+            },
+            " totalCount ": {
+              "type": "integer"
+            }
+          }
+        },
+        " peopleAlsoAsk ": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              " question ": {
+                "type": "string"
+              },
+              " answer ": {
+                "type": "string"
+              },
+              " sourceUrl ": {
+                "type": "string"
+              },
+              " sourceTitle ": {
+                "type": "string"
+              },
+              " sourceDisplay ": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        " relatedSearches ": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              " query ": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        " featuredSnippet ": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        " aiOverview ": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        " knowledgePanel ": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        " localPack ": {
+          "type": "array",
+          "items": {}
+        },
+        " richSnippets ": {
+          "type": "array",
+          "items": {}
+        },
+        " videos ": {
+          "type": "array",
+          "items": {}
+        },
+        " shopping ": {
+          "type": "array",
+          "items": {}
+        }
+      }
+    },
+    " metadata ": {
+      "type": "object",
+      "properties": {
+        " totalOrganicResults ": {
+          "type": "integer"
+        },
+        " hasAds ": {
+          "type": "boolean"
+        },
+        " hasPeopleAlsoAsk ": {
+          "type": "boolean"
+        },
+        " hasRelatedSearches ": {
+          "type": "boolean"
+        },
+        " hasFeaturedSnippet ": {
+          "type": "boolean"
+        },
+        " hasAiOverview ": {
+          "type": "boolean"
+        },
+        " hasKnowledgePanel ": {
+          "type": "boolean"
+        },
+        " hasLocalPack ": {
+          "type": "boolean"
+        }
+      }
+    },
+    " meta ": {
+      "type": "object",
+      "properties": {
+        " totalOrganic ": {
+          "type": "integer"
+        },
+        " requestedNum ": {
+          "type": "integer"
+        },
+        " elapsed ": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

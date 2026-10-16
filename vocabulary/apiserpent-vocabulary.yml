@@ -1,0 +1,75 @@
+generated: '2026-10-16'
+method: derived
+generator: derive-vocabulary.py
+source: openapi/_ae-authored/apiserpent-openapi-generated.yml
+vocabulary:
+  name: Contentladder Marketing Domain Vocabulary
+  description: 'Terms declared by Contentladder Marketing''s own API contract: its resource groups, objects and enumerations, with the contract''s
+    definitions. Derived, not authored.'
+  version: '2026-10-16'
+  terms:
+  - term: GetApiAiRankResponse
+    definition: 'Object declared by the contract with fields:  chatgpt ,  claude ,  gemini ,  perplexity .'
+    tags:
+    - Object
+    source: openapi/_ae-authored/apiserpent-openapi-generated.yml#/components/schemas/GetApiAiRankResponse
+  - term: GetApiAiRankChatgptResponse
+    definition: 'Object declared by the contract with fields:  chatgpt ,  claude ,  gemini ,  perplexity .'
+    tags:
+    - Object
+    source: openapi/_ae-authored/apiserpent-openapi-generated.yml#/components/schemas/GetApiAiRankChatgptResponse
+  - term: PostApiBulkJobsRequest
+    definition: 'Object declared by the contract with fields: tiktok_profile, tiktok_video, tiktok_hashtag, tiktok_search, tiktok_music.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/apiserpent-openapi-generated.yml#/components/schemas/PostApiBulkJobsRequest
+  - term: GetApiLinkedinProfileFullResponse
+    definition: 'Object declared by the contract with fields: full_name, first_name, last_name, headline, occupation, summary, location.city,
+      location.state, location.country, current_company.name, current_company.title, experiences. (8 more)'
+    tags:
+    - Object
+    source: openapi/_ae-authored/apiserpent-openapi-generated.yml#/components/schemas/GetApiLinkedinProfileFullResponse
+  - term: GetApiLinkedinLinkedinidResponse
+    definition: 'Object declared by the contract with fields:  success ,  data .'
+    tags:
+    - Object
+    source: openapi/_ae-authored/apiserpent-openapi-generated.yml#/components/schemas/GetApiLinkedinLinkedinidResponse
+  - term: GetApiRedditRedditidResponse
+    definition: 'Object declared by the contract with fields: subreddit, sort, t, limit.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/apiserpent-openapi-generated.yml#/components/schemas/GetApiRedditRedditidResponse
+  - term: GetApiSearchQuickResponse
+    definition: 'Object declared by the contract with fields:  success ,  query ,  type ,  engine ,  country ,  pagesRequested ,  pagesScraped
+      ,  results ,  metadata ,  meta .'
+    tags:
+    - Object
+    source: openapi/_ae-authored/apiserpent-openapi-generated.yml#/components/schemas/GetApiSearchQuickResponse
+  - term: GetApiSocialYoutubeYoutubeidResponse
+    definition: 'Object declared by the contract with fields:  success ,  query ,  type ,  results ,  totalResults ,  nextPageToken ,  prevPageToken
+      ,  meta .'
+    tags:
+    - Object
+    source: openapi/_ae-authored/apiserpent-openapi-generated.yml#/components/schemas/GetApiSocialYoutubeYoutubeidResponse
+  - term: GetApiTiktokTiktokidResponse
+    definition: 'Object declared by the contract with fields:  success ,  items ,  result_count ,  total_count ,  has_more ,  next_cursor ,  truncated
+      ,  restricted ,  complete ,  meta .'
+    tags:
+    - Object
+    source: openapi/_ae-authored/apiserpent-openapi-generated.yml#/components/schemas/GetApiTiktokTiktokidResponse
+  - term: GetApiXXidResponse
+    definition: 'Object declared by the contract with fields:  success ,  tweet .'
+    tags:
+    - Object
+    source: openapi/_ae-authored/apiserpent-openapi-generated.yml#/components/schemas/GetApiXXidResponse
+  - term: GetApiApiidResponse
+    definition: 'Object declared by the contract with fields:  success ,  query ,  type ,  engine ,  country ,  pagesScraped ,  results ,  meta
+      .'
+    tags:
+    - Object
+    source: openapi/_ae-authored/apiserpent-openapi-generated.yml#/components/schemas/GetApiApiidResponse
+  - term: GetApiApiidProfileResponse
+    definition: 'Object declared by the contract with fields:  success ,  tweet .'
+    tags:
+    - Object
+    source: openapi/_ae-authored/apiserpent-openapi-generated.yml#/components/schemas/GetApiApiidProfileResponse

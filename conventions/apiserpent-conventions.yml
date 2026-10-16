@@ -1,0 +1,19 @@
+generated: '2026-10-16'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://apiserpent.com/blog/google-maps-api-getting-started
+sources:
+- https://apiserpent.com/blog/google-maps-api-getting-started
+idempotency:
+  coverage: none
+  evidence: The documentation does not describe any idempotency key or mechanism.
+pagination:
+  style: cursor-based
+  params:
+  - next_page_token
+  response_fields:
+  - next_page_token
+  evidence: The Reviews endpoint returns up to 20 reviews per page and provides an opaque `next_page_token` that expires after 15 minutes. The
+    Quick search endpoint supports offset pagination via a `start` parameter (values 20, 40, 60, 80).
+authentication: API key via `X-API-Key` header
+docs: https://apiserpent.com/blog/google-maps-api-getting-started

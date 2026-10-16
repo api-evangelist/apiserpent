@@ -1,23 +1,127 @@
 aid: apiserpent
+
 name: Contentladder Marketing
-description: 'Contentladder Marketing is a company surfaced via the API Evangelist harvest backlog (source:
-  g2-catalog) and added to the network as a stub for full-pipeline profiling.'
+
+image: https://apiserpent.com/og-images/index.jpg
+
+description: Contentladder Marketing, operating as Serpent API, provides developers with affordable, high‑volume search engine results (SERP)
+  and related data across Google, Bing, Yahoo, DuckDuckGo, and Brave. They offer transparent per‑unit pricing, a free tier, and a suite of APIs
+  covering web search, image, video, news, shopping, maps, and social media data. The team of marketers built the service to reduce costs for
+  data‑driven teams and supports AI‑enhanced ranking and custom data pipelines.
+
 url: https://raw.githubusercontent.com/api-evangelist/apiserpent/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:g2-catalog
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-16 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-15'
+
 modified: '2026-10-15'
+
 tags:
 - Company
-apis: []
+- SERP
+- API
+- Search
+- Data
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Spectral
+  url: rules/apiserpent-rules.yml
+- type: JSONLD
+  url: json-ld/apiserpent-context.jsonld
+- type: Vocabulary
+  url: vocabulary/apiserpent-vocabulary.yml
+- type: DataModel
+  url: data-model/apiserpent-data-model.yml
+- type: Conventions
+  url: conventions/apiserpent-conventions.yml
+- type: Authentication
+  url: authentication/apiserpent-authentication.yml
+- type: Conformance
+  url: conformance/apiserpent-conformance.yml
+- type: LLMsTxt
+  url: llms/apiserpent-llms.txt
+- type: Hosts
+  url: hosts/apiserpent-hosts.yml
+- type: Vendors
+  url: vendors/apiserpent-vendors.yml
+- type: Sandbox
+  url: https://apiserpent.com/playground
+- type: Login
+  url: https://apiserpent.com/login
+- type: GitHubOrganization
+  url: https://github.com/apiserpent
+- type: GettingStarted
+  url: https://apiserpent.com/blog/google-maps-api-getting-started
+- type: DomainSecurity
+  url: security/apiserpent-domain-security.yml
 - type: Website
   url: https://apiserpent.com/
+- type: Documentation
+  url: https://apiserpent.com/docs
+- type: Pricing
+  url: https://apiserpent.com/pricing
+- type: TermsOfService
+  url: https://apiserpent.com/terms
+- type: PrivacyPolicy
+  url: https://apiserpent.com/privacy
+- type: Support
+  url: https://apiserpent.com/contact
+- type: Blog
+  url: https://apiserpent.com/blog
+
+apis:
+- name: Serpent API
+  description: Provides search engine results and related data across multiple engines via REST endpoints.
+  humanURL: https://apiserpent.com/docs
+  aid: apiserpent:serpent-api
+- aid: apiserpent:apiserpent-api
+  name: Contentladder Marketing API
+  description: 'Contentladder Marketing API as documented publicly: 12 operations. Contract generated from the documentation by API Evangelist
+
+    (2026-10-16); not the provider''s own document.'
+  humanURL: https://apiserpent.com/x-api
+  properties:
+  - type: OpenAPI
+    url: openapi/_ae-authored/apiserpent-openapi-generated.yml
+    x-provenance: generated
+  - type: JSONSchema
+    url: json-schema/apiserpent-get-api-search-quick-response-schema.json
+  - type: JSONSchema
+    url: json-schema/apiserpent-get-api-tiktok-tiktokid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/apiserpent-get-api-ai-rank-chatgpt-response-schema.json
+  - type: JSONSchema
+    url: json-schema/apiserpent-get-api-ai-rank-response-schema.json
+  - type: JSONSchema
+    url: json-schema/apiserpent-get-api-apiid-profile-response-schema.json
+  - type: JSONSchema
+    url: json-schema/apiserpent-get-api-xxid-response-schema.json
+
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: Documentation pages are rendered with JavaScript and provide no machine‑readable OpenAPI or other contract.
+  evidence:
+  - url: https://apiserpent.com/docs
+    status: 200
+  checked: '2026-10-16'
+x-enrichment:
+  date: '2026-10-16'
+  status: enriched
+  artifacts_added: 21
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

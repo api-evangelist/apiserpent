@@ -1,0 +1,15 @@
+generated: '2026-10-16'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://apiserpent.com/blog/google-maps-api-getting-started
+sources:
+- https://apiserpent.com/blog/google-maps-api-getting-started
+description: Authentication uses a Serpent API key sent in the X-API-Key header.
+schemes:
+- type: apiKey
+  name: Serpent API Key
+  evidence: You use a Serpent API key (sk_live_...) in the X-API-Key header.
+  location: header
+  header: X-API-Key
+  how_to_obtain: Create an account, then copy a sk_live_... key from the API keys page.
+docs: https://apiserpent.com/blog/google-maps-api-getting-started

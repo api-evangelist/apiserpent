@@ -1,0 +1,122 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apiserpent/main/json-schema/apiserpent-get-api-xxid-response-schema.json",
+  "title": "GetApiXXidResponse",
+  "x-generated": "2026-10-16",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/apiserpent-openapi-generated.yml#/components/schemas/GetApiXXidResponse",
+  "type": "object",
+  "properties": {
+    " success ": {
+      "type": "boolean"
+    },
+    " tweet ": {
+      "type": "object",
+      "properties": {
+        " id ": {
+          "type": "string"
+        },
+        " url ": {
+          "type": "string"
+        },
+        " text ": {
+          "type": "string"
+        },
+        " lang ": {
+          "type": "string"
+        },
+        " created_at ": {
+          "type": "string"
+        },
+        " possibly_sensitive ": {
+          "type": "boolean"
+        },
+        " is_edited ": {
+          "type": "boolean"
+        },
+        " author ": {
+          "type": "object",
+          "properties": {
+            " id ": {
+              "type": "string"
+            },
+            " name ": {
+              "type": "string"
+            },
+            " screen_name ": {
+              "type": "string"
+            },
+            " verified ": {
+              "type": "boolean"
+            },
+            " profile_image_url ": {
+              "type": "string"
+            }
+          }
+        },
+        " counts ": {
+          "type": "object",
+          "properties": {
+            " favorites ": {
+              "type": "integer"
+            },
+            " replies ": {
+              "type": "integer"
+            }
+          }
+        },
+        " media ": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              " type ": {
+                "type": "string"
+              },
+              " url ": {
+                "type": "string"
+              },
+              " width ": {
+                "type": "integer"
+              },
+              " height ": {
+                "type": "integer"
+              }
+            }
+          }
+        },
+        " hashtags ": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        " mentions ": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        " urls ": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        " quoted_tweet ": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        " reply_to ": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    }
+  }
+}
