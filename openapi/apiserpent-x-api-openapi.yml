@@ -1,0 +1,142 @@
+openapi: 3.2.0
+info:
+  title: Contentladder Marketing X API
+  version: '2026-10-16'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-16: 12 operation(s) read from 8 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Contentladder Marketing has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 21
+    documentation: -9
+    pages-with-code: 8
+    pages-read: 8
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-16'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://apiserpent.com/x-api
+  - https://apiserpent.com/news-api
+  - https://apiserpent.com/serp-api
+  - https://apiserpent.com/reddit-api
+  - https://apiserpent.com/tiktok-api
+  - https://apiserpent.com/ai-rank-api
+  - https://apiserpent.com/youtube-api
+  - https://apiserpent.com/linkedin-api
+security:
+- apiKey: []
+tags:
+- name: X
+paths:
+  /api/x/{xid}:
+    get:
+      operationId: get_api_x_xid
+      tags:
+      - X
+      summary: GET /api/x/tweet
+      x-source: https://apiserpent.com/x-api
+      parameters:
+      - name: xid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: id
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetApiXXidResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl " https://apiserpent.com/api/x/tweet?id=1234567890123456789 "  -H " X-API-Key : YOUR_API_KEY"'
+        collapsed_from: 2 example path(s) differing only at xId
+components:
+  schemas:
+    GetApiXXidResponse:
+      type: object
+      properties:
+        ' success ':
+          type: boolean
+        ' tweet ':
+          type: object
+          properties:
+            ' id ':
+              type: string
+            ' url ':
+              type: string
+            ' text ':
+              type: string
+            ' lang ':
+              type: string
+            ' created_at ':
+              type: string
+            ' possibly_sensitive ':
+              type: boolean
+            ' is_edited ':
+              type: boolean
+            ' author ':
+              type: object
+              properties:
+                ' id ':
+                  type: string
+                ' name ':
+                  type: string
+                ' screen_name ':
+                  type: string
+                ' verified ':
+                  type: boolean
+                ' profile_image_url ':
+                  type: string
+            ' counts ':
+              type: object
+              properties:
+                ' favorites ':
+                  type: integer
+                ' replies ':
+                  type: integer
+            ' media ':
+              type: array
+              items:
+                type: object
+                properties:
+                  ' type ':
+                    type: string
+                  ' url ':
+                    type: string
+                  ' width ':
+                    type: integer
+                  ' height ':
+                    type: integer
+            ' hashtags ':
+              type: array
+              items:
+                type: string
+            ' mentions ':
+              type: array
+              items:
+                type: string
+            ' urls ':
+              type: array
+              items:
+                type: string
+            ' quoted_tweet ':
+              type:
+              - string
+              - 'null'
+            ' reply_to ':
+              type:
+              - string
+              - 'null'
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      in: header
+      name: X-API-Key

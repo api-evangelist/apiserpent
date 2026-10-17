@@ -1,0 +1,49 @@
+{
+  "provider": "apiserpent",
+  "sources": [
+    "_ae-authored/apiserpent-openapi-generated.yml"
+  ],
+  "outputs": [
+    "apiserpent-ai-api-openapi.yml",
+    "apiserpent-bulk-api-openapi.yml",
+    "apiserpent-contentladder-marketing-api-api-openapi.yml",
+    "apiserpent-linkedin-api-openapi.yml",
+    "apiserpent-profile-api-openapi.yml",
+    "apiserpent-reddit-api-openapi.yml",
+    "apiserpent-search-api-openapi.yml",
+    "apiserpent-social-api-openapi.yml",
+    "apiserpent-tiktok-api-openapi.yml",
+    "apiserpent-x-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [
+    "sourced from openapi/_original/ (0 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "apiserpent-openapi-generated.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apiserpent-openapi-generated.yml: tagged paths GET /api/ai/rank -> Ai",
+    "apiserpent-openapi-generated.yml: tagged paths GET /api/ai/rank/chatgpt -> Ai",
+    "apiserpent-openapi-generated.yml: tagged paths POST /api/bulk/jobs -> Bulk",
+    "apiserpent-openapi-generated.yml: tagged paths GET /api/linkedin/profile/full -> Linkedin",
+    "apiserpent-openapi-generated.yml: tagged paths GET /api/linkedin/{linkedinid} -> Linkedin",
+    "apiserpent-openapi-generated.yml: tagged paths GET /api/reddit/{redditid} -> Reddit",
+    "apiserpent-openapi-generated.yml: tagged paths GET /api/search/quick -> Search",
+    "apiserpent-openapi-generated.yml: tagged paths GET /api/social/youtube/{youtubeid} -> Social",
+    "apiserpent-openapi-generated.yml: tagged paths GET /api/tiktok/{tiktokid} -> Tiktok",
+    "apiserpent-openapi-generated.yml: tagged paths GET /api/x/{xid} -> X",
+    "apiserpent-openapi-generated.yml: tagged paths GET /api/{apiid} -> Contentladder Marketing API",
+    "apiserpent-openapi-generated.yml: tagged paths GET /api/{apiid}/profile -> Profile",
+    "apiserpent-openapi-generated.yml: declared missing tag: Ai",
+    "apiserpent-openapi-generated.yml: declared missing tag: Bulk",
+    "apiserpent-openapi-generated.yml: declared missing tag: Contentladder Marketing API",
+    "apiserpent-openapi-generated.yml: declared missing tag: Linkedin",
+    "apiserpent-openapi-generated.yml: declared missing tag: Profile",
+    "apiserpent-openapi-generated.yml: declared missing tag: Reddit",
+    "apiserpent-openapi-generated.yml: declared missing tag: Search",
+    "apiserpent-openapi-generated.yml: declared missing tag: Social",
+    "apiserpent-openapi-generated.yml: declared missing tag: Tiktok",
+    "apiserpent-openapi-generated.yml: declared missing tag: X",
+    "apis.yml register: written (+10 apis, 11 total)"
+  ],
+  "skipped": []
+}

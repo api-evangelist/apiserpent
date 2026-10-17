@@ -1,0 +1,130 @@
+openapi: 3.2.0
+info:
+  title: Contentladder Marketing API
+  version: '2026-10-16'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-16: 12 operation(s) read from 8 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Contentladder Marketing has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 21
+    documentation: -9
+    pages-with-code: 8
+    pages-read: 8
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-16'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://apiserpent.com/x-api
+  - https://apiserpent.com/news-api
+  - https://apiserpent.com/serp-api
+  - https://apiserpent.com/reddit-api
+  - https://apiserpent.com/tiktok-api
+  - https://apiserpent.com/ai-rank-api
+  - https://apiserpent.com/youtube-api
+  - https://apiserpent.com/linkedin-api
+security:
+- apiKey: []
+tags:
+- name: Contentladder Marketing API
+paths:
+  /api/{apiid}:
+    get:
+      operationId: get_api_apiid
+      tags:
+      - Contentladder Marketing API
+      summary: GET /api/countries returns the full country list and needs no API key
+      x-source: https://apiserpent.com/news-api
+      parameters:
+      - name: apiid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: country
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: engine
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: freshness
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: q
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetApiApiidResponse'
+      x-evidence:
+        kind: documentation
+        collapsed_from: 4 example path(s) differing only at apiId
+components:
+  schemas:
+    GetApiApiidResponse:
+      type: object
+      properties:
+        ' success ':
+          type: boolean
+        ' query ':
+          type: string
+        ' type ':
+          type: string
+        ' engine ':
+          type: string
+        ' country ':
+          type: string
+        ' pagesScraped ':
+          type: integer
+        ' results ':
+          type: object
+          properties:
+            ' articles ':
+              type: array
+              items:
+                type: object
+                properties:
+                  ' position ':
+                    type: integer
+                  ' title ':
+                    type: string
+                  ' url ':
+                    type: string
+                  ' source ':
+                    type: string
+                  ' publishedTime ':
+                    type: string
+                  ' snippet ':
+                    type: string
+                  ' image ':
+                    type:
+                    - string
+                    - 'null'
+            ' totalResults ':
+              type: integer
+        ' meta ':
+          type: object
+          properties:
+            ' totalArticles ':
+              type: integer
+            ' elapsed ':
+              type: string
+            ' timestamp ':
+              type: string
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      in: header
+      name: X-API-Key

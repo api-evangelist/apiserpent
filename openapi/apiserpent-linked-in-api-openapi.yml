@@ -1,0 +1,180 @@
+openapi: 3.2.0
+info:
+  title: Contentladder Marketing LinkedIn API
+  version: '2026-10-16'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-16: 12 operation(s) read from 8 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Contentladder Marketing has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 21
+    documentation: -9
+    pages-with-code: 8
+    pages-read: 8
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-16'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://apiserpent.com/x-api
+  - https://apiserpent.com/news-api
+  - https://apiserpent.com/serp-api
+  - https://apiserpent.com/reddit-api
+  - https://apiserpent.com/tiktok-api
+  - https://apiserpent.com/ai-rank-api
+  - https://apiserpent.com/youtube-api
+  - https://apiserpent.com/linkedin-api
+security:
+- apiKey: []
+tags:
+- name: Linked In
+paths:
+  /api/linkedin/profile/full:
+    get:
+      operationId: get_api_linkedin_profile_full
+      tags:
+      - Linked In
+      summary: GET /api/linkedin/profile/full
+      x-source: https://apiserpent.com/linkedin-api
+      parameters:
+      - name: url
+        in: query
+        required: false
+        schema:
+          type: string
+        description: profile URL
+      - name: username
+        in: query
+        required: false
+        schema:
+          type: string
+        description: profile slug
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetApiLinkedinProfileFullResponse'
+      x-evidence:
+        kind: documentation
+  /api/linkedin/{linkedinid}:
+    get:
+      operationId: get_api_linkedin_linkedinid
+      tags:
+      - Linked In
+      summary: GET /api/linkedin/company
+      x-source: https://apiserpent.com/linkedin-api
+      parameters:
+      - name: linkedinid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: url
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetApiLinkedinLinkedinidResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl " https://apiserpent.com/api/linkedin/company?url=https://www.linkedin.com/company/stripe "  -H " X-API-Key : YOUR_API_KEY"'
+        collapsed_from: 6 example path(s) differing only at linkedinId
+components:
+  schemas:
+    GetApiLinkedinLinkedinidResponse:
+      type: object
+      properties:
+        ' success ':
+          type: boolean
+        ' data ':
+          type: object
+          properties:
+            ' name ':
+              type: string
+            ' universal_name_id ':
+              type: string
+            ' industry ':
+              type: string
+            ' company_size ':
+              type: string
+            ' employee_count ':
+              type: integer
+            ' founded_year ':
+              type: integer
+            ' company_type ':
+              type: string
+            ' specialities ':
+              type: array
+              items:
+                type: string
+            ' website ':
+              type: string
+            ' hq ':
+              type: object
+              properties:
+                ' city ':
+                  type: string
+                ' state ':
+                  type: string
+                ' country ':
+                  type: string
+                ' line_1 ':
+                  type: string
+            ' logo_url ':
+              type: string
+    GetApiLinkedinProfileFullResponse:
+      type: object
+      properties:
+        full_name:
+          type: string
+        first_name:
+          type: string
+        last_name:
+          type: string
+        headline:
+          type: string
+        occupation:
+          type: string
+        summary:
+          type: string
+        location.city:
+          type: string
+        location.state:
+          type: string
+        location.country:
+          type: string
+        current_company.name:
+          type: string
+        current_company.title:
+          type: string
+        experiences:
+          type: array
+        education:
+          type: array
+        languages:
+          type: array
+        honors_awards:
+          type: array
+        follower_count:
+          type: integer
+        connections:
+          type: integer
+        flags.top_voice:
+          type: boolean
+        profile_pic_url:
+          type: string
+        profile_url:
+          type: string
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      in: header
+      name: X-API-Key

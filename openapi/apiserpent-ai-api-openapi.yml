@@ -1,0 +1,229 @@
+openapi: 3.2.0
+info:
+  title: Contentladder Marketing AI API
+  version: '2026-10-16'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-16: 12 operation(s) read from 8 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Contentladder Marketing has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 21
+    documentation: -9
+    pages-with-code: 8
+    pages-read: 8
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-16'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://apiserpent.com/x-api
+  - https://apiserpent.com/news-api
+  - https://apiserpent.com/serp-api
+  - https://apiserpent.com/reddit-api
+  - https://apiserpent.com/tiktok-api
+  - https://apiserpent.com/ai-rank-api
+  - https://apiserpent.com/youtube-api
+  - https://apiserpent.com/linkedin-api
+security:
+- apiKey: []
+tags:
+- name: AI
+paths:
+  /api/ai/rank:
+    get:
+      operationId: get_api_ai_rank
+      tags:
+      - AI
+      summary: GET /api/ai/rank
+      x-source: https://apiserpent.com/ai-rank-api
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetApiAiRankResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl -G " https://apiserpent.com/api/ai/rank "  --data-urlencode " q=best project management tools "  -d " domain=example.com "  -H " X-API-Key : YOUR_API_KEY"'
+  /api/ai/rank/chatgpt:
+    get:
+      operationId: get_api_ai_rank_chatgpt
+      tags:
+      - AI
+      summary: GET /api/ai/rank/chatgpt
+      x-source: https://apiserpent.com/ai-rank-api
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetApiAiRankChatgptResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -G \" https://apiserpent.com/api/ai/rank/chatgpt \"  --data-urlencode \" q=best project management tools \"  -d \" domain=example.com \" -d \" prompt_type=deep \"  -H \" X-API-Key : YOUR_API_KEY\" \n Python — requests "
+components:
+  schemas:
+    GetApiAiRankChatgptResponse:
+      type: object
+      properties:
+        ' chatgpt ':
+          type: object
+          properties:
+            ' llm ':
+              type: string
+            ' model ':
+              type: string
+            ' citations ':
+              type: array
+              items:
+                type: object
+                properties:
+                  ' position ':
+                    type: integer
+                  ' url ':
+                    type: string
+                  ' title ':
+                    type: string
+                  ' cited_text ':
+                    type: string
+                  ' url_normalized ':
+                    type: string
+                  ' domain ':
+                    type: string
+            ' target_found ':
+              type: boolean
+            ' target_position ':
+              type: integer
+            ' target_match_type ':
+              type: string
+            ' target_matched_domain ':
+              type: string
+            ' total_citations ':
+              type: integer
+            ' response_text ':
+              type: string
+            ' error ':
+              type:
+              - string
+              - 'null'
+        ' claude ':
+          type: object
+          properties:
+            ' llm ':
+              type: string
+            ' model ':
+              type: string
+            ' target_found ':
+              type: boolean
+            ' target_position ':
+              type: integer
+        ' gemini ':
+          type: object
+          properties:
+            ' llm ':
+              type: string
+            ' model ':
+              type: string
+            ' target_found ':
+              type: boolean
+            ' target_position ':
+              type:
+              - string
+              - 'null'
+        ' perplexity ':
+          type: object
+          properties:
+            ' llm ':
+              type: string
+            ' model ':
+              type: string
+            ' target_found ':
+              type: boolean
+            ' target_position ':
+              type: integer
+    GetApiAiRankResponse:
+      type: object
+      properties:
+        ' chatgpt ':
+          type: object
+          properties:
+            ' llm ':
+              type: string
+            ' model ':
+              type: string
+            ' citations ':
+              type: array
+              items:
+                type: object
+                properties:
+                  ' position ':
+                    type: integer
+                  ' url ':
+                    type: string
+                  ' title ':
+                    type: string
+                  ' cited_text ':
+                    type: string
+                  ' url_normalized ':
+                    type: string
+                  ' domain ':
+                    type: string
+            ' target_found ':
+              type: boolean
+            ' target_position ':
+              type: integer
+            ' target_match_type ':
+              type: string
+            ' target_matched_domain ':
+              type: string
+            ' total_citations ':
+              type: integer
+            ' response_text ':
+              type: string
+            ' error ':
+              type:
+              - string
+              - 'null'
+        ' claude ':
+          type: object
+          properties:
+            ' llm ':
+              type: string
+            ' model ':
+              type: string
+            ' target_found ':
+              type: boolean
+            ' target_position ':
+              type: integer
+        ' gemini ':
+          type: object
+          properties:
+            ' llm ':
+              type: string
+            ' model ':
+              type: string
+            ' target_found ':
+              type: boolean
+            ' target_position ':
+              type:
+              - string
+              - 'null'
+        ' perplexity ':
+          type: object
+          properties:
+            ' llm ':
+              type: string
+            ' model ':
+              type: string
+            ' target_found ':
+              type: boolean
+            ' target_position ':
+              type: integer
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      in: header
+      name: X-API-Key

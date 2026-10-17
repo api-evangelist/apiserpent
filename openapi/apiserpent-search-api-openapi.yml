@@ -1,0 +1,191 @@
+openapi: 3.2.0
+info:
+  title: Contentladder Marketing Search API
+  version: '2026-10-16'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-16: 12 operation(s) read from 8 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Contentladder Marketing has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 21
+    documentation: -9
+    pages-with-code: 8
+    pages-read: 8
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-16'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://apiserpent.com/x-api
+  - https://apiserpent.com/news-api
+  - https://apiserpent.com/serp-api
+  - https://apiserpent.com/reddit-api
+  - https://apiserpent.com/tiktok-api
+  - https://apiserpent.com/ai-rank-api
+  - https://apiserpent.com/youtube-api
+  - https://apiserpent.com/linkedin-api
+security:
+- apiKey: []
+tags:
+- name: Search
+paths:
+  /api/search/quick:
+    get:
+      operationId: get_api_search_quick
+      tags:
+      - Search
+      summary: GET /api/search/quick
+      x-source: https://apiserpent.com/serp-api
+      parameters:
+      - name: engine
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: num
+        in: query
+        required: false
+        schema:
+          type: string
+      - name: q
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetApiSearchQuickResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl \" https://apiserpent.com/api/search/quick?q=best+crm+software&engine=ddg&num=10 \"  -H \" X-API-Key : YOUR_API_KEY\" \n JSON Response — the key set is identical on every engine \n {\n \" success \": true ,\n \" query \": \" best crm software \",\n \" type \": \" web \",\n \" engine \": \" brave \",\n \" country \": \" us \",\n \" pagesRequested \": 2 ,\n \" pagesScraped \": 2 ,\n \" results \": {\n \" organic \": [\n {\n \" title \": \""
+components:
+  schemas:
+    GetApiSearchQuickResponse:
+      type: object
+      properties:
+        ' success ':
+          type: boolean
+        ' query ':
+          type: string
+        ' type ':
+          type: string
+        ' engine ':
+          type: string
+        ' country ':
+          type: string
+        ' pagesRequested ':
+          type: integer
+        ' pagesScraped ':
+          type: integer
+        ' results ':
+          type: object
+          properties:
+            ' organic ':
+              type: array
+              items:
+                type: object
+                properties:
+                  ' title ':
+                    type: string
+                  ' url ':
+                    type: string
+                  ' snippet ':
+                    type: string
+                  ' displayedUrl ':
+                    type: string
+                  ' position ':
+                    type: integer
+            ' ads ':
+              type: object
+              properties:
+                ' top ':
+                  type: array
+                  items: {}
+                ' bottom ':
+                  type: array
+                  items: {}
+                ' totalCount ':
+                  type: integer
+            ' peopleAlsoAsk ':
+              type: array
+              items:
+                type: object
+                properties:
+                  ' question ':
+                    type: string
+                  ' answer ':
+                    type: string
+                  ' sourceUrl ':
+                    type: string
+                  ' sourceTitle ':
+                    type: string
+                  ' sourceDisplay ':
+                    type: string
+            ' relatedSearches ':
+              type: array
+              items:
+                type: object
+                properties:
+                  ' query ':
+                    type: string
+            ' featuredSnippet ':
+              type:
+              - string
+              - 'null'
+            ' aiOverview ':
+              type:
+              - string
+              - 'null'
+            ' knowledgePanel ':
+              type:
+              - string
+              - 'null'
+            ' localPack ':
+              type: array
+              items: {}
+            ' richSnippets ':
+              type: array
+              items: {}
+            ' videos ':
+              type: array
+              items: {}
+            ' shopping ':
+              type: array
+              items: {}
+        ' metadata ':
+          type: object
+          properties:
+            ' totalOrganicResults ':
+              type: integer
+            ' hasAds ':
+              type: boolean
+            ' hasPeopleAlsoAsk ':
+              type: boolean
+            ' hasRelatedSearches ':
+              type: boolean
+            ' hasFeaturedSnippet ':
+              type: boolean
+            ' hasAiOverview ':
+              type: boolean
+            ' hasKnowledgePanel ':
+              type: boolean
+            ' hasLocalPack ':
+              type: boolean
+        ' meta ':
+          type: object
+          properties:
+            ' totalOrganic ':
+              type: integer
+            ' requestedNum ':
+              type: integer
+            ' elapsed ':
+              type: string
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      in: header
+      name: X-API-Key

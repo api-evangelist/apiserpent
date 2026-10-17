@@ -85,19 +85,19 @@ common:
 
 apis:
 - name: Serpent API
-  description: Provides search engine results and related data across multiple engines via REST endpoints.
+  description: >-
+    Provides search engine results and related data across multiple engines via REST endpoints.
   humanURL: https://apiserpent.com/docs
   aid: apiserpent:serpent-api
-- aid: apiserpent:apiserpent-api
-  name: Contentladder Marketing API
-  description: 'Contentladder Marketing API as documented publicly: 12 operations. Contract generated from the documentation by API Evangelist
-
-    (2026-10-16); not the provider''s own document.'
-  humanURL: https://apiserpent.com/x-api
+- aid: apiserpent:apiserpent-ai-api
+  name: Contentladder Marketing AI API
+  description: The Ai API from Contentladder Marketing — 2 operation(s) for ai.
+  humanURL: https://apiserpent.com/docs
+  tags:
+  - Ai
   properties:
   - type: OpenAPI
-    url: openapi/_ae-authored/apiserpent-openapi-generated.yml
-    x-provenance: generated
+    url: openapi/apiserpent-ai-api-openapi.yml
   - type: JSONSchema
     url: json-schema/apiserpent-get-api-search-quick-response-schema.json
   - type: JSONSchema
@@ -110,7 +110,197 @@ apis:
     url: json-schema/apiserpent-get-api-apiid-profile-response-schema.json
   - type: JSONSchema
     url: json-schema/apiserpent-get-api-xxid-response-schema.json
-
+- aid: apiserpent:apiserpent-bulk-api
+  name: Contentladder Marketing Bulk API
+  description: The Bulk API from Contentladder Marketing — 1 operation(s) for bulk.
+  humanURL: https://apiserpent.com/docs
+  tags:
+  - Bulk
+  properties:
+  - type: OpenAPI
+    url: openapi/apiserpent-bulk-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/apiserpent-get-api-search-quick-response-schema.json
+  - type: JSONSchema
+    url: json-schema/apiserpent-get-api-tiktok-tiktokid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/apiserpent-get-api-ai-rank-chatgpt-response-schema.json
+  - type: JSONSchema
+    url: json-schema/apiserpent-get-api-ai-rank-response-schema.json
+  - type: JSONSchema
+    url: json-schema/apiserpent-get-api-apiid-profile-response-schema.json
+  - type: JSONSchema
+    url: json-schema/apiserpent-get-api-xxid-response-schema.json
+- aid: apiserpent:apiserpent-contentladder-marketing-api-api
+  name: Contentladder Marketing Contentladder Marketing API
+  description: >-
+    The Contentladder Marketing API API from Contentladder Marketing — 1 operation(s) for contentladder
+    marketing api.
+  humanURL: https://apiserpent.com/docs
+  tags:
+  - Contentladder Marketing API
+  properties:
+  - type: OpenAPI
+    url: openapi/apiserpent-contentladder-marketing-api-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/apiserpent-get-api-search-quick-response-schema.json
+  - type: JSONSchema
+    url: json-schema/apiserpent-get-api-tiktok-tiktokid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/apiserpent-get-api-ai-rank-chatgpt-response-schema.json
+  - type: JSONSchema
+    url: json-schema/apiserpent-get-api-ai-rank-response-schema.json
+  - type: JSONSchema
+    url: json-schema/apiserpent-get-api-apiid-profile-response-schema.json
+  - type: JSONSchema
+    url: json-schema/apiserpent-get-api-xxid-response-schema.json
+- aid: apiserpent:apiserpent-profile-api
+  name: Contentladder Marketing Profile API
+  description: The Profile API from Contentladder Marketing — 1 operation(s) for profile.
+  humanURL: https://apiserpent.com/docs
+  tags:
+  - Profile
+  properties:
+  - type: OpenAPI
+    url: openapi/apiserpent-profile-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/apiserpent-get-api-search-quick-response-schema.json
+  - type: JSONSchema
+    url: json-schema/apiserpent-get-api-tiktok-tiktokid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/apiserpent-get-api-ai-rank-chatgpt-response-schema.json
+  - type: JSONSchema
+    url: json-schema/apiserpent-get-api-ai-rank-response-schema.json
+  - type: JSONSchema
+    url: json-schema/apiserpent-get-api-apiid-profile-response-schema.json
+  - type: JSONSchema
+    url: json-schema/apiserpent-get-api-xxid-response-schema.json
+- aid: apiserpent:apiserpent-reddit-api
+  name: Contentladder Marketing Reddit API
+  description: The Reddit API from Contentladder Marketing — 1 operation(s) for reddit.
+  humanURL: https://apiserpent.com/docs
+  tags:
+  - Reddit
+  properties:
+  - type: OpenAPI
+    url: openapi/apiserpent-reddit-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/apiserpent-get-api-search-quick-response-schema.json
+  - type: JSONSchema
+    url: json-schema/apiserpent-get-api-tiktok-tiktokid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/apiserpent-get-api-ai-rank-chatgpt-response-schema.json
+  - type: JSONSchema
+    url: json-schema/apiserpent-get-api-ai-rank-response-schema.json
+  - type: JSONSchema
+    url: json-schema/apiserpent-get-api-apiid-profile-response-schema.json
+  - type: JSONSchema
+    url: json-schema/apiserpent-get-api-xxid-response-schema.json
+- aid: apiserpent:apiserpent-search-api
+  name: Contentladder Marketing Search API
+  description: The Search API from Contentladder Marketing — 1 operation(s) for search.
+  humanURL: https://apiserpent.com/docs
+  tags:
+  - Search
+  properties:
+  - type: OpenAPI
+    url: openapi/apiserpent-search-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/apiserpent-get-api-search-quick-response-schema.json
+  - type: JSONSchema
+    url: json-schema/apiserpent-get-api-tiktok-tiktokid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/apiserpent-get-api-ai-rank-chatgpt-response-schema.json
+  - type: JSONSchema
+    url: json-schema/apiserpent-get-api-ai-rank-response-schema.json
+  - type: JSONSchema
+    url: json-schema/apiserpent-get-api-apiid-profile-response-schema.json
+  - type: JSONSchema
+    url: json-schema/apiserpent-get-api-xxid-response-schema.json
+- aid: apiserpent:apiserpent-social-api
+  name: Contentladder Marketing Social API
+  description: The Social API from Contentladder Marketing — 1 operation(s) for social.
+  humanURL: https://apiserpent.com/docs
+  tags:
+  - Social
+  properties:
+  - type: OpenAPI
+    url: openapi/apiserpent-social-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/apiserpent-get-api-search-quick-response-schema.json
+  - type: JSONSchema
+    url: json-schema/apiserpent-get-api-tiktok-tiktokid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/apiserpent-get-api-ai-rank-chatgpt-response-schema.json
+  - type: JSONSchema
+    url: json-schema/apiserpent-get-api-ai-rank-response-schema.json
+  - type: JSONSchema
+    url: json-schema/apiserpent-get-api-apiid-profile-response-schema.json
+  - type: JSONSchema
+    url: json-schema/apiserpent-get-api-xxid-response-schema.json
+- aid: apiserpent:apiserpent-tiktok-api
+  name: Contentladder Marketing Tiktok API
+  description: The Tiktok API from Contentladder Marketing — 1 operation(s) for tiktok.
+  humanURL: https://apiserpent.com/docs
+  tags:
+  - Tiktok
+  properties:
+  - type: OpenAPI
+    url: openapi/apiserpent-tiktok-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/apiserpent-get-api-search-quick-response-schema.json
+  - type: JSONSchema
+    url: json-schema/apiserpent-get-api-tiktok-tiktokid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/apiserpent-get-api-ai-rank-chatgpt-response-schema.json
+  - type: JSONSchema
+    url: json-schema/apiserpent-get-api-ai-rank-response-schema.json
+  - type: JSONSchema
+    url: json-schema/apiserpent-get-api-apiid-profile-response-schema.json
+  - type: JSONSchema
+    url: json-schema/apiserpent-get-api-xxid-response-schema.json
+- aid: apiserpent:apiserpent-x-api
+  name: Contentladder Marketing X API
+  description: The X API from Contentladder Marketing — 1 operation(s) for x.
+  humanURL: https://apiserpent.com/docs
+  tags:
+  - X
+  properties:
+  - type: OpenAPI
+    url: openapi/apiserpent-x-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/apiserpent-get-api-search-quick-response-schema.json
+  - type: JSONSchema
+    url: json-schema/apiserpent-get-api-tiktok-tiktokid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/apiserpent-get-api-ai-rank-chatgpt-response-schema.json
+  - type: JSONSchema
+    url: json-schema/apiserpent-get-api-ai-rank-response-schema.json
+  - type: JSONSchema
+    url: json-schema/apiserpent-get-api-apiid-profile-response-schema.json
+  - type: JSONSchema
+    url: json-schema/apiserpent-get-api-xxid-response-schema.json
+- aid: apiserpent:apiserpent-linked-in-api
+  name: Contentladder Marketing Linked In API
+  description: The Linked In API from Contentladder Marketing — 2 operation(s) for linked in.
+  humanURL: https://apiserpent.com/docs
+  tags:
+  - Linked In
+  properties:
+  - type: OpenAPI
+    url: openapi/apiserpent-linked-in-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/apiserpent-get-api-search-quick-response-schema.json
+  - type: JSONSchema
+    url: json-schema/apiserpent-get-api-tiktok-tiktokid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/apiserpent-get-api-ai-rank-chatgpt-response-schema.json
+  - type: JSONSchema
+    url: json-schema/apiserpent-get-api-ai-rank-response-schema.json
+  - type: JSONSchema
+    url: json-schema/apiserpent-get-api-apiid-profile-response-schema.json
+  - type: JSONSchema
+    url: json-schema/apiserpent-get-api-xxid-response-schema.json
 x-coverage:
   state: unreadable
   reason: js-rendered-docs
