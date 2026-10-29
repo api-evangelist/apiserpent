@@ -64,5 +64,125 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Contentladder Marketing is a company surfaced via the API Evangelist harvest backlog (source: g2-catalog) and added to the network as a stub for full-pipeline profiling.
-- https://apiserpent.com/
+Contentladder Marketing, operating as Serpent API, provides developers with affordable, high‑volume search engine results (SERP) and related data across Google, Bing, Yahoo, DuckDuckGo, and Brave. They offer transparent per‑unit pricing, a free tier, and a suite of APIs covering web search, image, video, news, shopping, maps, and social media data. The team of marketers built the service to reduce costs for data‑driven teams and supports AI‑enhanced ranking and custom data pipelines.
+
+**Areas:** Company · SERP · Search · Data
+
+## Contentladder Marketing on APIs.io
+
+Everything profiled for Contentladder Marketing is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/apiserpent/](https://apis.io/providers/apiserpent/)** — or go straight to one of the APIs or properties below.
+
+### APIs (11)
+
+- [Serpent API](https://apis.io/apis/apiserpent/serpent-api/) — Provides search engine results and related data across multiple engines via REST endpoints.
+- [Contentladder Marketing AI API](https://apis.io/apis/apiserpent/apiserpent-ai-api/) — The Ai API from Contentladder Marketing — 2 operation(s) for ai.
+- [Contentladder Marketing Bulk API](https://apis.io/apis/apiserpent/apiserpent-bulk-api/) — The Bulk API from Contentladder Marketing — 1 operation(s) for bulk.
+- [Contentladder Marketing Contentladder Marketing API](https://apis.io/apis/apiserpent/apiserpent-contentladder-marketing-api-api/) — The Contentladder Marketing API API from Contentladder Marketing — 1 operation(s) for contentladder marketing api.
+- [Contentladder Marketing Profile API](https://apis.io/apis/apiserpent/apiserpent-profile-api/) — The Profile API from Contentladder Marketing — 1 operation(s) for profile.
+- [Contentladder Marketing Reddit API](https://apis.io/apis/apiserpent/apiserpent-reddit-api/) — The Reddit API from Contentladder Marketing — 1 operation(s) for reddit.
+- [Contentladder Marketing Search API](https://apis.io/apis/apiserpent/apiserpent-search-api/) — The Search API from Contentladder Marketing — 1 operation(s) for search.
+- [Contentladder Marketing Social API](https://apis.io/apis/apiserpent/apiserpent-social-api/) — The Social API from Contentladder Marketing — 1 operation(s) for social.
+- [Contentladder Marketing Tiktok API](https://apis.io/apis/apiserpent/apiserpent-tiktok-api/) — The Tiktok API from Contentladder Marketing — 1 operation(s) for tiktok.
+- [Contentladder Marketing X API](https://apis.io/apis/apiserpent/apiserpent-x-api/) — The X API from Contentladder Marketing — 1 operation(s) for x.
+- [Contentladder Marketing Linked In API](https://apis.io/apis/apiserpent/apiserpent-linked-in-api/) — The Linked In API from Contentladder Marketing — 2 operation(s) for linked in.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### JSON Schema (6)
+
+The data models the API reads and writes.
+
+- [GetApiAiRankChatgptResponse](https://apis.io/schemas/apiserpent/apiserpent-get-api-ai-rank-chatgpt-response/)
+- [GetApiAiRankResponse](https://apis.io/schemas/apiserpent/apiserpent-get-api-ai-rank-response/)
+- [GetApiApiidProfileResponse](https://apis.io/schemas/apiserpent/apiserpent-get-api-apiid-profile-response/)
+- [GetApiSearchQuickResponse](https://apis.io/schemas/apiserpent/apiserpent-get-api-search-quick-response/)
+- [GetApiTiktokTiktokidResponse](https://apis.io/schemas/apiserpent/apiserpent-get-api-tiktok-tiktokid-response/)
+- [GetApiXXidResponse](https://apis.io/schemas/apiserpent/apiserpent-get-api-xxid-response/)
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Apiserpent Context](https://apis.io/jsonld/apiserpent/apiserpent-context/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [Contentladder Marketing API Rules](https://apis.io/rules/apiserpent/apiserpent-rules/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Apiserpent Authentication](https://apis.io/security/apiserpent/apiserpent-authentication/)
+- [Apiserpent Domain Security](https://apis.io/security/apiserpent/apiserpent-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://apiserpent.com/)
+- [Documentation](https://apiserpent.com/docs)
+- [Getting started](https://apiserpent.com/blog/google-maps-api-getting-started)
+- [Pricing](https://apiserpent.com/pricing)
+- [Support](https://apiserpent.com/contact)
+- [Blog](https://apiserpent.com/blog)
+- [Terms of service](https://apiserpent.com/terms)
+- [Privacy policy](https://apiserpent.com/privacy)
+- [GitHub](https://github.com/apiserpent)
+
+## API Evangelist rating
+
+**Kin Score 34.5** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 60.7 |
+| Contract quality | 24.8 |
+| Contract governance | 19.7 |
+| Operational transparency | 5.3 |
+| Developer ergonomics | 47.6 |
+| Access clarity | 44.7 |
+
+**Agent readiness 20.5** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | verified |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 24.5** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/apiserpent/](https://apis.io/providers/apiserpent/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Contentladder Marketing: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/apiserpent/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
